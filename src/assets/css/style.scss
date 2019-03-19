@@ -1,0 +1,50 @@
+/*============================== 
+            Fonts CSS 
+==============================*/
+
+@import url("../css/fonts.css");
+
+/*============================== 
+            Colors
+==============================*/
+$white-color: #fff;
+$black-color: #202020;
+$primary-color: #eecb06;
+
+/*============================== 
+            Common Style 
+==============================*/
+
+* {
+	position: relative;
+	-webkit-user-select: none;
+	user-select: none;
+}
+body {
+	font: {
+        family: 'Poppins', sans-serif !important;
+        size: 14px;
+    }
+    color: rgba(0,0,0,.84);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    line-height: 2em;
+	background-color: #121421 !important;
+}
+
+/*============================== 
+        Home page style                                                                                                                                                                                                                                                                                                                                                                                                                                                    Style 
+==============================*/
+.container--wrap {
+    background: #252835;
+}
+.header-wrapper {
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #22242d;
+    background: #171b35;
+    margin: 0.6rem;
+    .logo {
+        width: 180px;
+    }
+}
