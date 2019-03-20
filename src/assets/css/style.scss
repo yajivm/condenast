@@ -31,20 +31,128 @@ body {
     line-height: 2em;
 	background-color: #121421 !important;
 }
-
+.box-shadow {
+    box-shadow: 0px 5px 15px 8px rgba(0, 0, 0, 0.05);
+}
 /*============================== 
         Home page style                                                                                                                                                                                                                                                                                                                                                                                                                                                    Style 
 ==============================*/
 .container--wrap {
     background: #252835;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 100vh;
 }
-.header-wrapper {
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #22242d;
-    background: #171b35;
-    margin: 0.6rem;
-    .logo {
-        width: 180px;
+.header{
+    padding: 0.6rem;
+    &-wrapper {
+        padding: 1.2rem;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #050506;
+        background: #171b35;
+        .logo {
+            width: 135px;
+        }
+        h2 {
+            font-weight: 300;
+            text-shadow: 0px 2px #314863;
+        }
     }
+}
+.time-wrapper {
+    height: 75px;
+    width: 90%;
+    margin: 0 auto;
+    .grey-bg {
+        background: #2d3249;
+        border-radius: 5px;
+        padding: 0.8rem;
+        text-align: center;
+        span {
+            &:first-child {
+                color: #888ca4;
+                margin-right: 20px;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            line-height: 2rem;
+            vertical-align: middle;
+            color: $white-color;
+            font-size: 1.4rem;
+        }
+    }
+}
+.bandge-wrapper {
+    & > div {
+        display: inline-block;
+        width: 50%;
+    }
+    .badge-text {
+        color: #c1c0c0;
+        font-size: 0.8rem;
+        line-height: 35px;
+        vertical-align: super;
+        margin-left: 8px;
+    }
+}
+.round-badge {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+    box-shadow: 0px 0px 10px #050506;
+    &--green {
+        background: #55bc4f;
+    }
+    &--yellow {
+        background: #ffde34
+    }
+    &--orange {
+        background: #f9b235;
+    }
+    &--red {
+        background: #f04636
+    }
+}
+.card-analytic {
+    margin: 1.5rem 0;
+    .analytic-title {
+        padding: 15px 15px 5px;
+        background: #2b3042;
+        h5 {
+            font-size: 1rem
+        }
+    }
+    .analytic-badge {
+        display: flex;
+        justify-content: space-around;
+        background: #121c28;
+        padding: 0 5px;
+        span {
+            text-align: center;
+            color: #fff;
+            display: block;
+            margin: 10px auto;
+            font-size: 0.8rem;
+            &.round-badge{
+                margin-bottom: 0;
+                &--transparent {
+                    background: transparent;
+                    border: 1px solid;
+                }
+            }
+            &.badge-text {
+                margin-top: 0px !important;
+                font-size: 0.7rem;
+                color: #646b7f;
+            }
+        }
+    }
+}
+.card-title h4 {
+    font-size: 1.2rem;
+    color: #868aa2;
+    border-bottom: 1px solid #888ca4;
+    padding-bottom: 14px;
 }

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 //import images
@@ -8,21 +8,50 @@ export default class Header extends Component {
     
     render() {
         return(
-            <div className="header-wrapper">
-                <Row className="m-0 header-wrapper--inner">
-                    <Col>
-                        <img
-                            src={logo}
-                            alt="condenast"
-                            title="CondeNast"
-                            className="img-fluid logo"
-                        />
-                        <h1>Data Status</h1>
-                    </Col>
-                    <Col>
-                    
-                    </Col>
-                </Row>
+            <div className="header">
+                <div className="header-wrapper box-shadow ">
+                    <Row className="m-0 header-wrapper--inner py-3">
+                        <Col>
+                            <img
+                                src={logo}
+                                alt="condenast"
+                                title="CondeNast"
+                                className="img-fluid logo"
+                            />
+                            <h2 className="text-white">Data Status</h2>
+                        </Col>
+                        <Col>
+                            <div className="d-flex justify-content-center align-items-center time-wrapper">
+                                <div className="w-100">
+                                    <div className="grey-bg">
+                                        <span>UPDATED</span>
+                                        <span className="time-span">3/3/19 15:05</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className="bandge-wrapper">
+                                <div className="">
+                                    <span className="round-badge round-badge--green"></span>
+                                    <span className="badge-text">Complete</span>
+                                </div>
+                                <div className="">
+                                    <span className="round-badge round-badge--yellow"></span>
+                                    <span className="badge-text">Quality Alert</span>
+                                </div>
+                                <div className="">
+                                    <span className="round-badge round-badge--orange"></span>
+                                    <span className="badge-text">Partial Load</span>
+                                </div>
+                                <div className="">
+                                    <span className="round-badge round-badge--red"></span>
+                                    <span className="badge-text">No Load</span>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
             </div>
         )
     }
