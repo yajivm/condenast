@@ -10,7 +10,7 @@ export default class CondeNast extends Component {
             <div className="page-content">
                 <Suspense fallback={<div>Loading..</div>}>
                     <Switch>
-                        <Route path="/home" render={(props)=><Home {...props} />} />
+                        <Route path="/" render={(props)=><Home {...props} />} />
                     </Switch>
                 </Suspense>
             </div>

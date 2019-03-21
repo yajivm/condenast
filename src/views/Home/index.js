@@ -13,18 +13,30 @@ export default class Home extends Component {
     state = {
         userEngagement: sampleData.userEngagement(),
         adDelivery: sampleData.adDelivery(),
-        consumerMarketing: sampleData.consumerMarketing()
+        consumerMarketing: sampleData.consumerMarketing(),
+        analyticData: ''
     }
     
     componentDidMount() {
-        console.log(sampleData.userEngagement, "userEngagement")
+        var date = new Date();
+        var time = date.getTime();
+        this.getTime(time);
+    }
+
+    //get refreshed time
+    getTime = (time)=> {
+        this.setState({
+            analyticData: time
+        })
     }
 
     render() {
         return (            
             <div className="page-content-innner-wrapper m-0">
                 <div className="container--wrap p-0">
-                    <Header />
+                    <Header
+                        time = {this.state.analyticData}
+                    />
                     <main className="py-3 px-4">
                         <Row className="m-0">
                             <Col>

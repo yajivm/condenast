@@ -18,18 +18,20 @@ export default memo((props) => {
                         {data.statusByDate.map((data, key) => 
                             {
                                 if(data.status === "Complete") {
-                                    return(<div className="" key={data.status+"--"+key}>
-                                        <span className={"round-badge round-badge--green"}>
-                                            {data.date === Moment().format("MM/DD") &&
-                                                <img src = {star}
-                                                    alt="star"
-                                                    title="star"
-                                                    className="img-responsive"
-                                                />
-                                            }
-                                        </span>
-                                        <span className="badge-text">{data.date}</span>
-                                    </div>)
+                                    return(
+                                        <div className="" key={data.status+"--"+key}>
+                                            <span className={"round-badge round-badge--green"}>
+                                                {data.date === Moment().format("MM/DD") &&
+                                                    <img src = {star}
+                                                        alt="star"
+                                                        title="star"
+                                                        className="img-responsive"
+                                                    />
+                                                }
+                                            </span>
+                                            <span className="badge-text">{data.date}</span>
+                                        </div>
+                                    )
                                 }
                                 if(data.status === "QualityAlert") {
                                     return(<div className="" key={data.status+"--"+key}>
@@ -60,33 +62,38 @@ export default memo((props) => {
                                     </div>)
                                 }
                                 if(data.status === "Schedule") {
-                                    return(<div className="" key={data.status+"--"+key}>
-                                        <span className={"round-badge round-badge--transparent"}>
-                                            {data.date === Moment().format("MM/DD") &&
-                                                <img src = {star}
-                                                    alt="star"
-                                                    title="star"
-                                                    className="img-responsive"
-                                                />
-                                            }
-                                        </span>
-                                        <span className={"badge-text" + (data.date === Moment().format("MM/DD") ? " text-white" : "")}>{data.date}</span>
-                                    </div>)
+                                    return(
+                                        <div className="" key={data.status+"--"+key}>
+                                            <span className={"round-badge round-badge--transparent"}>
+                                                {data.date === Moment().format("MM/DD") &&
+                                                    <img src = {star}
+                                                        alt="star"
+                                                        title="star"
+                                                        className="img-responsive"
+                                                    />
+                                                }
+                                            </span>
+                                            <span className={"badge-text" + (data.date === Moment().format("MM/DD") ? " text-white" : "")}>{data.date}</span>
+                                        </div>
+                                    )
                                 }
                                 if(data.status === "NoLoad") {
-                                    return(<div className="" key={data.status+"--"+key}>
-                                        <span className={"round-badge round-badge--green"}>
-                                            {data.date === Moment().format("MM/DD") &&
-                                                <img src = {star}
-                                                    alt="star"
-                                                    title="star"
-                                                    className="img-responsive"
-                                                />
-                                            }
-                                        </span>
-                                        <span className={"badge-text" + (data.date === Moment().format("MM/DD") ? " text-white" : "")}>{data.date}</span>
-                                    </div>)
+                                    return(
+                                        <div className="" key={data.status+"--"+key}>
+                                            <span className={"round-badge round-badge--green"}>
+                                                {data.date === Moment().format("MM/DD") &&
+                                                    <img src = {star}
+                                                        alt="star"
+                                                        title="star"
+                                                        className="img-responsive"
+                                                    />
+                                                }
+                                            </span>
+                                            <span className={"badge-text" + (data.date === Moment().format("MM/DD") ? " text-white" : "")}>{data.date}</span>
+                                        </div>
+                                    )
                                 }
+                                return true;
                             }
                         )}
                     </div>   

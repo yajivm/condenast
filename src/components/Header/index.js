@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 //import images
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo.png';
+
+//import moment
+import Moment from 'moment';
 
 export default class Header extends Component {
     
@@ -25,7 +28,7 @@ export default class Header extends Component {
                                 <div className="w-100">
                                     <div className="grey-bg">
                                         <span>UPDATED</span>
-                                        <span className="time-span">3/3/19 15:05</span>
+                                        <span className="time-span">{Moment(this.props.time).format("DD/MM/DD h:mm")}</span>
                                     </div>
                                 </div>
                             </div>

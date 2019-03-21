@@ -64,7 +64,7 @@ body {
 
 .time-wrapper {
   height: 75px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -84,7 +84,7 @@ body {
 
 .time-wrapper .grey-bg span:first-child {
   color: #888ca4;
-  margin-right: 20px;
+  margin-right: 35px;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -133,12 +133,13 @@ body {
 }
 
 .card-analytic .analytic-title {
-  padding: 15px 15px 5px;
+  padding: 10px 15px 2px;
   background: #2b3042;
 }
 
 .card-analytic .analytic-title h5 {
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 
 .card-analytic .analytic-badge {
